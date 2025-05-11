@@ -1,0 +1,120 @@
+/* General reset and font setup */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #74ebd5, #9face6);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+/* Main container */
+#weather-web {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    max-width: 400px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Page title */
+h1 {
+    text-align: center;
+    margin: 0;
+    color: #444;
+    font-size: 1.8rem;
+}
+
+/* Input section */
+.city-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.city-input label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.city-input input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.city-input button {
+    padding: 10px;
+    background-color: #5c6bc0;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.city-input button:hover {
+    background-color: #3f51b5;
+}
+
+/* Weather display */
+#weather-display {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#weather-display p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Country flag / weather icon */
+#weather-display-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10px; /* pull it slightly closer to the data */
+}
+
+#weather-display-icon img,
+#weather-display img#weather-icon {
+    width: 48px;
+    height: 36px;
+    object-fit: contain;
+}
+
+/* Visiting recommendation */
+#visiting-recommendation {
+    font-size: 1rem;
+    background: #f0f4ff;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border-left: 4px solid #5c6bc0;
+    color: #333;
+    line-height: 1.4;
+    margin-top: 10px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 360px) {
+    #weather-web {
+        padding: 20px;
+    }
+
+    #weather-display-icon img,
+    #weather-display img#weather-icon {
+        width: 40px;
+        height: 30px;
+    }
+}
